@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            {{ message }}
+        </div>
+
+        <div id="app-2">
+           <ol>
+               <li v-for="msg in bucl">
+                 {{ msg.message }}
+               </li>
+           </ol>
+          </div>
+        <div id="autor">
+           <p> Nombre de autor {{name}}</p>
+           <p> fecha {{dt}}</p>
+        
+            <div> 
+             <img style="width:500px;" v-bind:src="imag">
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+    <script>
+      new Vue({
+          el: '#autor',
+          data:{
+              name: 'Kenia Gabriela Sanchez Duran A01244940',
+              dt: '15 mar 2022',
+              imag:'https://i.pinimg.com/564x/1d/32/ed/1d32ed0fc49e08e09166264fdec53861.jpg'
+          },
+
+      });
+
+    </script>
+</html>
